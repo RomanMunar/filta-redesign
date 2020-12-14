@@ -1,0 +1,27 @@
+{
+  "name": "filta_redesign",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwind build ./src/tailwind.css  -o ./public/tailwind.css",
+    "build": "NODE_ENV=production npx tailwind build ./src/tailwind.css -o ./public/tailwind.css",
+    "watch": "tailwind help"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.1",
+    "postcss-cli": "latest"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "not dead"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.0.2"
+  }
+}
