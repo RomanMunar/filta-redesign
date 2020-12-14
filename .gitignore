@@ -1,1 +1,3 @@
 node_modules/
+# Generate the css file using `yarn dev` or `yarn build` 
+public/tailwind.css
