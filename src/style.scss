@@ -1,0 +1,35 @@
+@import "utilities.scss";
+
+$fontBold: "Futura PT Bold";
+$fontBook: "Futura Book";
+
+$primary: #000;
+$secondary: #4b5563;
+$display: #1f2937;
+$accent-1: #fea500;
+$accent-2: #feb733;
+$accent-3: #fec966;
+
+body {
+  font-family: $fontBook, "-apple-system", "BlinkMacSystemFont", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+
+  img {
+    height: 2rem;
+  }
+  div {
+    ul {
+      display: flex;
+    }
+  }
+}
