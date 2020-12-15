@@ -29,4 +29,17 @@
 - The site is too long, remove a few sections.
 - Contact form should not be at the bottom
 - Center the texts and don't use diagrams on negative spaces.
+
+---
+
+# Run locally
+
+> Assumming you already have npm installed if not go and install (nodejs)[https://nodejs.org], npm is bundled with nodejs.
+
+- Clone this repo: `git clone https://github.com/RomanMunar/filta-redesign`
+- Then, `cd filta-redesign`
+- install deps, `npm i`
+- build the css file `npm run dev`
+- Install Live Server on VSCode then open (http://localhost:5500/public)[http://localhost:5500/public]
+
 ### Contact Me at roman.munar1@gmail.com
