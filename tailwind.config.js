@@ -23,8 +23,11 @@ module.exports = {
   },
   variants: {
     extend: {
+      boxShadow: ["hover"],
       backgroundColor: ["group-focus"],
       textColor: ["group-focus"],
+      translate: ["group-hover"],
+      scale: ["active"],
     },
   },
   plugins: [],
