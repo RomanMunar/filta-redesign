@@ -1,11 +1,8 @@
 {
   "name": "filta_redesign",
-  "version": "1.0.0",
-  "description": "---",
-  "main": "index.js",
   "scripts": {
-    "dev": "tailwind build ./src/tailwind.css  -o ./public/tailwind.css",
-    "build": "NODE_ENV=production npx tailwind build ./src/tailwind.css -o ./public/tailwind.css"
+    "dev": "tailwind build ./styles/tailwind.css  -o ./public/tailwind.css",
+    "build": "NODE_ENV=production tailwind build ./styles/tailwind.css -o ./public/tailwind.css"
   },
   "dependencies": {
     "tailwindcss": "^2.0.2"
@@ -20,7 +17,6 @@
     "last 4 versions",
     "not dead"
   ],
-  "keywords": [],
-  "author": "",
+  "author": "Roman Munar",
   "license": "ISC"
 }
