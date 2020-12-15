@@ -1,4 +1,15 @@
-# Filta Redesign
+## Filta Redesign
+
+This is an opionated redesign of [filta's homepage](https://www.filtaglobal.com).
+
+Table of Contents
+
+- [Filta Redesign](#filta-redesign)
+- [Appreciation](#appreciation)
+- [Needs to change, asap](#needs-to-change-asap)
+- [Nitpicks](#nitpicks)
+- [Run locally](#run-locally)
+- [Contact Me at roman.munar1@gmail.com](#contact-me-at-romanmunar1gmailcom)
 
 ---
 
@@ -32,14 +43,14 @@
 
 ---
 
-# Run locally
+## Run locally
 
-> Assumming you already have npm installed if not go and install (nodejs)[https://nodejs.org], npm is bundled with nodejs.
+> This assumes you already have npm installed, if not go and install [nodejs](https://www.nodejs.org).
 
 - Clone this repo: `git clone https://github.com/RomanMunar/filta-redesign`
 - Then, `cd filta-redesign`
 - install deps, `npm i`
 - build the css file `npm run dev`
-- Install Live Server on VSCode then open (http://localhost:5500/public)[http://localhost:5500/public]
+- Install Live Server on VSCode then open [http://localhost:5500/public](http://localhost:5500/public)
 
-### Contact Me at roman.munar1@gmail.com
+## Contact Me at roman.munar1@gmail.com
