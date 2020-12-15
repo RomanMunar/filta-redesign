@@ -15,6 +15,14 @@ module.exports = {
       zIndex: {
         1: "1",
       },
+      minHeight: {
+        "70vh": "70vh",
+        "80vh": "80vh",
+      },
+      maxHeight: {
+        "70vh": "70vh",
+        "80vh": "80vh",
+      },
     },
     fontFamily: {
       display: ['"Futura PT Bold"'],
