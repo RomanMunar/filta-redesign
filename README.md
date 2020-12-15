@@ -31,7 +31,7 @@ Table of Contents
   - Black over white, bad for the eyes
   - It does not look like a form
   - Change the color of placeholders on input fields
-- Change the carousel on the testimonial section.
+- Change the slider on the testimonial section.
 
 ## Nitpicks
 
@@ -39,7 +39,7 @@ Table of Contents
 - Images competes with the content for attention
 - The site is too long, remove a few sections.
 - Contact form should not be at the bottom
-- Center the texts and don't use diagrams on negative spaces.
+- Center the headlines on a section and don't use diagrams on negative spaces.
 
 ---
 
