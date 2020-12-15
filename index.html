@@ -23,8 +23,6 @@
     content="https://filtaglobal.com/wp-content/uploads/2019/08/redex-digital-logo-2-white-600px-1-300x54.png">
   <!-- Fonts -->
   <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="keen-slider.css">
   <title>
     Filta — Outsourcing to the Philippines, That Actually Works.
@@ -35,6 +33,15 @@
   <style>
     .yellow-dot {
       color: #FFA400
+    }
+
+    .zoom-out {
+      perspective: 1000px;
+      height: 50vw;
+    }
+
+    .zoom-out__slide {
+      position: absolute;
     }
   </style>
 </head>
@@ -215,7 +222,7 @@
             experience.</p>
         </div>
       </div>
-      <img class="md:w-80 md:h-80" src="./assets/images/inversed-circle-diagram.png" />
+      <img class="md:w-80 md:h-80" src="/public/assets/images/inversed-circle-diagram.png" />
     </article>
     <div class="relative">
       <img src="/public/assets/images/office-chair.jpg" alt="Team Collaborating">
@@ -244,7 +251,7 @@
           </div>
         </div>
       </div>
-      <img class="w-96 h-96" src="./assets/images/inversed-circle-diagram.png" />
+      <img class="w-96 h-96" src="public/assets/images/inversed-circle-diagram.png" />
     </article> -->
     <article
       class="flex flex-col md:flex-row justify-between items-center p-10 max-w-6xl mx-auto my-20 space-y-10 md:space-y-0 md:space-x-10">
@@ -264,7 +271,7 @@
           </div>
         </div>
       </div>
-      <img class="md:w-80 md:h-80" src="./assets/images/circle-icons-diagram.png" />
+      <img class="md:w-80 md:h-80" src="/public/assets/images/circle-icons-diagram.png" />
     </article>
     <div class="grid md:grid-cols-2">
       <div class="relative">
@@ -523,7 +530,7 @@
       </div>
     </footer>
   </main>
-  <script src="./keen-slider.js"></script>
+  <script src="/public/keen-slider.js"></script>
   <script>
     var elements = document.querySelectorAll(".zoom-out__slide")
     var review = Array.from(document.querySelectorAll(".reviewButton"))
