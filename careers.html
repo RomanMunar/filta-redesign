@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filta — Careers redesign</title>
+  <link rel="stylesheet" href="./public/tailwind.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+</head>
+
+<body class="max-h-screen bg-white overflow-hidden">
+  <!-- Nav Drawer -->
+  <div id="modal" class="hidden z-40 fixed top-0 bottom-0 right-0 left-0 overflow-auto bg-opacity-30 bg-black">
+    <nav class="absolute bottom-0 text-white h-96 w-screen">
+      <div class="h-full flex rounded-2xl rounded-b-none items-center flex-col text-base bg-gray-800 overflow-x-hidden">
+        <header class="flex items-center justify-between p-4 pb-4 sm:px-6">
+          <div class="h-7 absolute top-5 right-5 flex items-center">
+            <button id="modal-close-button" aria-label="Close panel"
+              class="hover:text-gray-500 transition ease-in-out duration-150">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision">
+                <path d="M18 6L6 18"></path>
+                <path d="M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <span
+            class="border-2 border-dashed border-primary flex items-center justify-center rounded-md bg-white px-5 py-2 bg-secondary text-secondary">
+            <img class="h-14 w-28" src="public/assets/images/Logo-1500x750-2-min.png">
+          </span>
+        </header>
+        <ul class="text-center flex flex-col space-y-4">
+          <li class="hover:text-primary transition-colors duration-400 whitespace-nowrap text-lg font-bold">
+            <a href="/index.html">Home</a>
+          </li>
+          <li
+            class="text-primary hover:text-primary transition-colors duration-400 whitespace-nowrap text-lg font-bold">
+            <a href="/careers.html">Careers</a>
+          </li>
+          <li class="hover:text-primary transition-colors duration-400 whitespace-nowrap text-lg font-bold"><a
+              href="#">Outsourcing</a></li>
+          <li class="hover:text-primary transition-colors duration-400 whitespace-nowrap text-lg font-bold"><a
+              href="#">By
+              The Hour</a></li>
+          <li class="hover:text-primary transition-colors duration-400 whitespace-nowrap text-lg font-bold"><a
+              href="#">Local Recruitment</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar -->
+  <nav id="nav" class="flex w-full z-1 top-0 bg-opacity-0 bg-white p-4">
+    <div>
+      <a href="/"><img id="logo" class="h-10" id="logo" src="./public/assets/images/Logo-1500x750-2-min.png"
+          alt="Filta logo"></a>
+    </div>
+    <div class="flex-1"></div>
+    <div class="flex">
+      <ul class="hidden space-x-2 divide-x md:flex">
+        <li class="whitespace-nowrap text-lg font-bold px-2"><a href="#">Home</a></li>
+        <li class="whitespace-nowrap text-lg font-bold px-2"><a href="#">Careers</a>
+          <div class="border border-primary"></div>
+        </li>
+        <li class="whitespace-nowrap text-lg font-bold px-2"><a href="#">Outsourcing</a></li>
+        <li class="whitespace-nowrap text-lg font-bold px-2"><a href="#">By The Hour</a></li>
+        <li class="whitespace-nowrap text-lg font-bold px-2"><a href="#">Local Recruitment</a></li>
+      </ul>
+      <button id="modal-open-button" class="md:hidden">
+        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+
+  <div class="h-full max-w-6xl mx-auto flex">
+    <div class="max-h-90vh max-w-xl mx-auto border flex-grow overflow-auto">
+      <div class="my-2 flex flex-col">
+        <h3 class="mx-4 font-thin">Search results for "Software & IT Jobs"</h3>
+        <div class="relative w-11/12 mr-4 mx-auto">
+          <input type="text"
+            class="border mt-2 w-full px-2 py-1 rounded-sm focus:outline-none focus:ring-2 ring-green-700 ring-opacity-40">
+          <svg class="absolute opacity-75 w-5 h-5 top-4 right-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+        <div class="mx-4 mt-2 self-end flex flex-row items-center space-x-2">
+          <span class="inline-flex font-bold text-xs px-2 bg-gray-200 rounded-full">25 Full time Jobs</span>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t flex bg-yellow-100">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            ReactJS Developers - interview now &amp; start Jan 2021
+          </h3>
+          <p class="text-xs text-gray-800">Manila , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            4-5 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/07/2020</span>
+          <p class="text-sm text-gray-800">Want to start fresh this coming 2021? Apply now and start in January! Enjoy a
+            hassle-free application within the comfort of your home Be a part of a w...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Web Developer and Designer (WordPress)
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            1-3 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/14/2020</span>
+          <p class="text-sm text-gray-800">Want to start fresh this coming 2021? Apply now and start in January! Enjoy a
+            hassle-free application within the comfort of your home Be part of the p...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            WordPress Developer
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            1-3 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/14/2020</span>
+          <p class="text-sm text-gray-800">Want to start fresh this coming 2021? Apply now and start in January! Enjoy a
+            hassle-free application within the comfort of your home Be part of the p...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            PHP Back-End Developer
+          </h3>
+          <p class="text-xs text-gray-800">Ortigas, Manila , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">4-5 years • </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/14/2020</span>
+          <p class="text-sm text-gray-700">Join Australia's top ShopifyPlus Partner! 6:00am to 3:00pm Monday to Friday
+            shift HMO for yourself and one dependent within the first month &nbsp; Work wit...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Administration Coordinator - Aussie Company
+          </h3>
+          <p class="text-xs text-gray-800">Metro Manila , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> Fresher</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/07/2020</span>
+          <p class="text-sm text-gray-800">6:00am to 3:00pm Monday to Friday shift How would you like to support the
+            operations of a fast-growing Australian BPO consultancy adding immense value...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            End Developer (Ruby on Rails)
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            4-5 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/23/2020</span>
+          <p class="text-sm text-gray-800">Want to start fresh this coming 2021? Apply now and start in January! Enjoy a
+            hassle-free application within the comfort of your home We are on the hu...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Graphic Designer (Mid weight)
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> 1-3 years</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/08/2020</span>
+          <p class="text-sm text-gray-800">7:00am-4:00pm Monday to Friday Shift Full time • and permanent We are looking
+            for a passionate and self-motivated GRAPHIC DESIGNER&nbsp;who can create and de...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Mid Weight Graphic Designer - UK Company
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            4-5 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/03/2020</span>
+          <p class="text-sm text-gray-800">Work UK Hours - 3:00pm-12:00 midnight, Monday to Friday Shift Full time and
+            permanent Let's start with the obvious reason for making us your go-to sup...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Graphic Designer - Mid Weight
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            4-5 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/19/2020</span>
+          <p class="text-sm text-gray-800">6:00am-3:00pm Monday to Friday Shift Full time • and permanent Are you an
+            experienced, creative and passionate&nbsp;GRAPHIC DESIGNER&nbsp;who can create and deliv...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Graphic Designer - Graduate (Aussie Company)
+          </h3>
+          <p class="text-xs text-gray-800">Metro Manila , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">Fresher</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm">Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/23/2020</span>
+          <p class="text-sm text-gray-800">Are you a fresh graduate looking for a place where you can learn, thrive, and
+            be successful? Are you creative, persistent, and a self-starter? You hav...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Administration Assistant - Australian Company
+          </h3>
+          <p class="text-xs text-gray-800">Metro Manila , Philippines</p>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/23/2020</span>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">Fresher</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm">Full time • </span>
+          <p class="text-sm text-gray-800">Are you a fresh graduate looking for a place where you can learn, thrive, and
+            be successful? Are you creative, persistent, and a self-starter? You hav...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            CAD Drafter - Graduate
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> Fresher</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/04/2020</span>
+          <p class="text-sm text-gray-800">This is a full time, permanent work-from-home role with the majority of the
+            team based in Australia&nbsp; Well established, well known and innovative Austr...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Application Specialist
+          </h3>
+          <p class="text-xs text-gray-800">Metro Manila , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            1-3 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/04/2020</span>
+          <p class="text-sm text-gray-800">Do you have an eye for details? Do you feel energized upon completion of
+            tasks? You might be the person we’re looking for! &nbsp; We are looking for a Loan...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Link Building &amp; Outreach Specialist
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">4-5 years</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/01/2020</span>
+          <p class="text-sm text-gray-800">9:00am to 5:00pm Monday to Friday shift HMO for yourself and one dependent
+            within the first month We are seeking a strategic and innovative LINK BUILD...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            3D VIZCAD Artist - Fresher
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> Fresher</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/20/2020</span>
+          <p class="text-sm text-gray-800">This is a full time, permanent work-from-home role with the majority of the
+            team based in Australia&nbsp; Well established, well known and innovative Austr...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Content Marketing Manager - UK Company
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            4-5 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">12/03/2020</span>
+          <p class="text-sm text-gray-800">Work UK Hours - 3:00pm to 12:00 midnight Full-time and permanent We are
+            looking for a talented, confident and enthusiastic CONTENT MARKETING MANAGER t...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Senior ReactJS Developers
+          </h3>
+          <p class="text-xs text-gray-800">Manila , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">
+            4-5 years •
+          </span>
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/09/2020</span>
+          <p class="text-sm text-gray-800">Want to start fresh this coming 2021? Apply now and start in January! Enjoy a
+            hassle-free application within the comfort of your home Be a part of a w...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Full Stack Magento Developer
+          </h3>
+          <p class="text-xs text-gray-800">Ortigas, Manila , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">1-3 years</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/15/2020</span>
+          <p class="text-sm text-gray-700">Want to start fresh this coming 2021? Apply now and start in January! Enjoy a
+            hassle-free application within the comfort of your home We are in search...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Full Stack Developer (Shopify and PHP)
+          </h3>
+          <p class="text-xs text-gray-800">Ortigas, Manila , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide">1-3 years</span> •
+          <span class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/15/2020</span>
+          <p class="text-sm text-gray-700">Want to start fresh this coming 2021? Apply now and start in January! Enjoy a
+            hassle-free application within the comfort of your home We are in search...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Outreach Specialist
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> 4-5 years</span> • <span
+            class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/20/2020</span>
+          <p class="text-sm text-gray-800">9:00am to 5:00pm Monday to Friday shift HMO for yourself and one dependent
+            within the first month We are seeking a strategic and innovative OUTREACH S...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Link Building Specialist
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> 4-5 years</span> • <span
+            class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/20/2020</span>
+          <p class="text-sm text-gray-800">9:00am to 5:00pm Monday to Friday shift HMO for yourself and one dependent
+            within the first month We are seeking a strategic and innovative LINK BUILD...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Marketing Administrator
+          </h3>
+          <p class="text-xs text-gray-800">Philipppines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> 5+ years</span> • <span
+            class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/18/2020</span>
+          <p class="text-sm text-gray-800">Work 6am to 3pm Monday to Friday HMO for yourself and one dependent within
+            the first month Work for an established, family owned, industry manufacturi...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Senior Marketing Coordinator
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> 5+ years</span> • <span
+            class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/17/2020</span>
+          <p class="text-sm text-gray-800">Work 6am to 3pm Monday to Friday HMO for yourself and one dependent within
+            the first month Work for an established, family owned, industry manufacturi...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Marketing Manager
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> 5+ years</span> • <span
+            class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/17/2020</span>
+          <p class="text-sm text-gray-800">Work 6am to 3pm Monday to Friday HMO for yourself and one dependent within
+            the first month Work for an established, family owned, industry manufacturi...</p>
+        </div>
+      </div>
+      <div class="py-3 px-5 border-t bg-white flex">
+        <div class="joblist-card">
+          <h3 class="font-semibold text-lg">
+            Marketing Coordinator
+          </h3>
+          <p class="text-xs text-gray-800">Philippines , Philippines</p>
+          <span class="text-sm text-gray-800 font-semibold track tracking-wide"> 5+ years</span> • <span
+            class="p-2 text-gray-800 font-bold text-sm"> Full time • </span>
+          <span class="px-2 py-1 rounded-full bg-gray-200 text-xs">11/13/2020</span>
+          <p class="text-sm text-gray-800">Work 6am to 3pm Monday to Friday HMO for yourself and one dependent within
+            the first month Work for an established, family owned, industry manufacturi...</p>
+        </div>
+      </div>
+    </div>
+    <div class="hidden p-5 sm:block max-h-90vh overflow-auto border w-full">
+      <div class="p-2">
+        <p class="px-4">
+        <div class="rounded-lg space-y-5 border p-4">
+          <h3 class="text-xl font-bold">Job Description</h3>
+          <ul class="text-sm">
+            <li>
+              <span class="colour">
+                <span class="size"><span class="font">• Want to start fresh this coming 2021? </span></span>
+              </span>
+              <span class="colour">
+                <span class="size"><span class="font">Apply now and start in January!</span></span>
+              </span>
+            </li>
+            <li>
+              <span class="size">
+                <span class="font">• Enjoy a hassle-free application within the comfort of your home</span><span
+                  class="font"><br /></span>
+              </span>
+            </li>
+            <li>
+              <span class="colour">
+                <span class="colour">
+                  <span class="size">
+                    <span class="font">
+                      •Be a part of a well-regarded Australian digital agency who are Shopify
+                      Experts&nbsp;specialising
+                      in complex enterprise solutions built upon&nbsp;Shopify Plus predominately for lifestyle brands.
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </li>
+          </ul>
+          <span class="size"><span class="px-2 bg-gray-200 rounded-full font-medium text-sm text-gray-800">Day Shift
+              Only</span></span>
+          <div class="text-sm  text-gray-900">
+            <span class="colour">
+              <span class="highlight">
+                <span class="colour">
+                  <span class="highlight">
+                    <span class="colour">
+                      <span class="size">
+                        <span class="font">
+                          Working with Australian based Senior Developers, this position’s main overall objective is
+                          to be responsible for front-end development and maintenance across the client
+                          base.&nbsp;This business has a flat
+                          structure where egos are kept out of the studio, they believe every developer needs to take
+                          complete ownership of projects including accurately estimating project timelines and are
+                          committed to deadlines and
+                          delivering to specification.
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+            <div class="text-sm mt-5 text-gray-900">
+              <span class="colour">
+                <span class="highlight">
+                  <span class="colour">
+                    <span class="font">
+                      <span class="size">
+                        They're growing rapidly (still) with a huge influx of new website projects, they need amazing
+                        development skills to make these projects come to life and are looking to hire six passionate
+                        developers.
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+              <br />
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="rounded-lg border p-4">
+          <div class="space-y-5">
+            <ul>
+              <h3 class="text-lg">Requirements</h3>
+              <li>
+                <span class="highlight">
+                  <span class="colour">
+                    <span class="colour">
+                      <span class="font"><span class="text-gray-900 text-sm">• Experience in ReactJS
+                          Development</span></span>
+                    </span>
+                  </span>
+                </span>
+                <br />
+              </li>
+
+              <li>
+                <span class="highlight">
+                  <span class="colour">
+                    <span class="colour">
+                      <span class="font"><span class="text-gray-900 text-sm">• Knowledge in Full Stack
+                          Development</span></span>
+                    </span>
+                  </span>
+                </span>
+                <br />
+              </li>
+
+              <li>
+                <span class="highlight">
+                  <span class="colour">
+                    <span class="colour">
+                      <span class="font"><span class="text-gray-900 text-sm">• Extensive experience in HTML and
+                          CSS</span></span>
+                    </span>
+                  </span>
+                </span>
+              </li>
+              <li>
+                <span class="highlight">
+                  <span class="colour">
+                    <span class="colour">
+                      <span class="font"><span class="text-gray-900 text-sm">• AN Opinionated and specific way to
+                          code</span></span>
+                    </span>
+                  </span>
+                </span>
+              </li>
+            </ul>
+            <div>
+              <div>
+                <span class="font">
+                  <span class="text-lg">Desirable</span>
+                </span>
+                <br />
+              </div>
+              <ul>
+                <li>
+                  <span class="font">
+                    <span class="text-gray-900 text-sm">• Experience in any eCommerce platform</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div>
+                <span class="highlight">
+                  <span class="colour">
+                    <span class="highlight">
+                      <span class="colour">
+                        <span class="font">
+                          <span class="text-gray-900 text-lg">Traits we're looking for in you:</span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <ul>
+                <li>
+                  <span class="highlight">
+                    <span class="colour">
+                      <span class="highlight">
+                        <span class="colour">
+                          <span class="font"><span class="text-gray-900 text-sm">• A quick learner&nbsp;- in a
+                              face-paced area of
+                              JavaScript&nbsp;frameworks, your ability to take on the latest changes and understanding
+                              is key</span></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <br />
+                </li>
+
+                <li>
+                  <span class="highlight">
+                    <span class="colour">
+                      <span class="highlight">
+                        <span class="colour">
+                          <span class="font"><span class="text-gray-900 text-sm">• Takes ownership and responsibility
+                              for complete
+                              work</span></span>
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                  <br />
+                </li>
+
+                <li>
+                  <span class="font"><span class="text-gray-900 text-sm">• Exceptional attention to
+                      detail</span></span><br />
+                </li>
+                <li>
+                  <span class="font"><span class="text-gray-900 text-sm">• A problem solver</span></span><br />
+                </li>
+                <li>
+                  <span class="font"><span class="text-gray-900 text-sm">• Strong lateral thinker</span></span><br />
+                </li>
+                <li>
+                  <span class="highlight">
+                    <span class="font"><span class="text-gray-900 text-sm">• Ability to communicate ideas to the team
+                        and know the steps to
+                        achieve them</span></span>
+                  </span>
+                  <br />
+                </li>
+
+                <li>
+                  <span class="font"><span class="text-gray-900 text-sm">• Understanding of "why" not just "what" you
+                      do</span></span><br />
+                </li>
+                <li>
+                  <span class="font"><span class="text-gray-900 text-sm">• Has the "I can't let this fail"
+                      attitude</span></span><br />
+                </li>
+                <li>
+                  <span class="font"><span class="text-gray-900 text-sm">• Ability to work in a fast-paced
+                      environment</span></span><br />
+                </li>
+                <li>
+                  <span class="font"><span class="text-gray-900 text-sm">• Real team player - looking out for others
+                      and
+                      achieving
+                      together</span></span><br />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="rounded-lg border p-4">
+          <h3 class="text-lg text-gray-900">Benefits</h3>
+          <div>
+            <span class="highlight">
+              <span class="colour">
+                <span class="colour">
+                  <span class="highlight">
+                    <span class="colour">
+                      <span class="size">
+                        <span class="text-gray-900 text-sm">• On top of being a really cool company and a great place to
+                          work, you’ll
+                          get the following benefits as part of the Filta Family</span>
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </span>
+          </div>
+          <ul>
+            <li>
+              <span class="highlight">
+                <span class="colour">
+                  <span class="colour">
+                    <span class="size"><span class="text-gray-900 text-sm">• 6:00am to 3:00pm Monday to Friday
+                        shift</span></span>
+                  </span>
+                </span>
+              </span>
+              <br />
+            </li>
+
+            <li>
+              <span class="highlight">
+                <span class="colour">
+                  <span class="colour">
+                    <span class="size"><span class="text-gray-900 text-sm">• HMO for yourself and one dependent within
+                        the first
+                        month</span></span>
+                  </span>
+                </span>
+              </span>
+              <span class="size">
+                <span class="font"><br /></span>
+              </span>
+            </li>
+            <li>
+              <span class="highlight">
+                <span class="colour">
+                  <span class="colour">
+                    <span class="size"><span class="text-gray-900 text-sm">• 20 combined SL/VLs per year accrued from
+                        day one (you will
+                        have 10 accrued once you pass regularisation)</span></span>
+                  </span>
+                </span>
+              </span>
+              <span class="size">
+                <span class="font"><br /></span>
+              </span>
+            </li>
+            <li>
+              <span class="highlight">
+                <span class="colour">
+                  <span class="colour">
+                    <span class="size"><span class="text-gray-900 text-sm">• 30 minutes early out Fridays (after
+                        regularisation, upon
+                        completing all your tasks for the week, and if you’re on time during the week)</span></span>
+                  </span>
+                </span>
+              </span>
+              <br />
+            </li>
+
+            <li>
+              <span class="highlight">
+                <span class="colour">
+                  <span class="colour">
+                    <span class="colour">
+                      <span class="size"><span class="text-gray-900 text-sm">• Company perks relating to your role such
+                          as free tickets
+                          to meetups, conventions, conferences, etc.</span></span>
+                    </span>
+                  </span>
+                </span>
+              </span>
+              <span class="size">
+                <span class="font"><br /></span>
+              </span>
+            </li>
+            <li>
+              <span class="highlight">
+                <span class="colour">
+                  <span class="colour">
+                    <span class="size"><span class="text-gray-900 text-sm">• The opportunity to be a part
+                        of&nbsp;</span></span>
+                    <span class="colour">
+                      <span class="size"><span class="font">Shopify Meetup Manila</span></span>
+                    </span>
+                    <span class="size"><span class="font">&nbsp;run by Filta every quarter.&nbsp; This event will
+                        expose you to the Shopify – the world's fastest growing eCommerce platform – and the ecosystem
+                        in Manila.</span></span>
+                  </span>
+                </span>
+              </span>
+              <span class="size">
+                <span class="font"><br /></span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Nav  -->
+  <script>
+    window.onscroll = () => {
+      let nav = document.getElementById("nav")
+      let logo = document.getElementById("logo").className
+
+      if (document.body.scrollTop > 88 || document.documentElement.scrollTop > 88) {
+        logo = "h-7"
+        if (!nav.className.includes("bg-opacity-60")) {
+          nav.className = nav.className + " px-5 bg-opacity-60"
+          nav.className = nav.className.replace("absolute", "sticky")
+        }
+      } else {
+        nav.className = nav.className.replace("px-5 bg-opacity-60", "")
+        logo = "h-10"
+      }
+    };
+
+  </script>
+  <!-- Modal Nav -->
+  <script>
+    const modal = document.getElementById("modal")
+    const modalClose = document.getElementById("modal-close-button")
+    const modalOpen = document.getElementById("modal-open-button")
+
+    function disableBodyScroll({ savePosition = false } = {}) {
+      if (document.readyState === 'complete') {
+        if (document.body.scrollHeight > window.innerHeight) {
+          if (savePosition) document.body.style.marginTop = `-${window.pageYOffset}px`;
+          document.body.style.position = 'fixed';
+          document.body.style.overflowY = 'scroll';
+        }
+      } else {
+        window.addEventListener('load', () => disableBodyScroll({ savePosition }));
+      }
+    }
+    function enableBodyScroll() {
+      if (document.readyState === 'complete') {
+        document.body.style.position = '';
+        document.body.style.overflowY = '';
+
+        if (document.body.style.marginTop) {
+          const scrollTop = -parseInt(document.body.style.marginTop, 10);
+          document.body.style.marginTop = '';
+          window.scrollTo(window.pageXOffset, scrollTop);
+        }
+      } else {
+        window.addEventListener('load', enableBodyScroll);
+      }
+    }
+
+    /* ! The order of this functions is important ! */
+    modalClose.addEventListener("click", (e) => {
+      enableBodyScroll()
+      modal.classList.add("hidden")
+    })
+    modalOpen.addEventListener("click", (e) => {
+      disableBodyScroll()
+      modal.classList.remove("hidden")
+    })
+    modal.addEventListener("click", (e) => {
+      if (e.target.id === "modal") {
+        enableBodyScroll()
+        modal.classList.add("hidden")
+      }
+    })
+  </script>
+</body>
+
+</html>
